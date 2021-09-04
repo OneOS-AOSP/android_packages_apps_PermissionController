@@ -28,6 +28,7 @@ import static com.android.permissioncontroller.permission.ui.GrantPermissionsAct
 import static com.android.permissioncontroller.permission.ui.GrantPermissionsActivity.NO_UPGRADE_OT_BUTTON;
 
 import android.app.Activity;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -35,6 +36,7 @@ import android.text.method.LinkMovementMethod;
 import android.transition.ChangeBounds;
 import android.transition.TransitionManager;
 import android.util.SparseArray;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -211,7 +213,12 @@ public class GrantPermissionsViewHandlerImpl implements GrantPermissionsViewHand
 
     @Override
     public void updateWindowAttributes(LayoutParams outLayoutParams) {
-        // No-op
+        outLayoutParams.width = LayoutParams.MATCH_PARENT;
+        outLayoutParams.height = LayoutParams.WRAP_CONTENT;
+        outLayoutParams.format = PixelFormat.TRANSPARENT;
+        outLayoutParams.gravity = Gravity.BOTTOM;
+        outLayoutParams.type = LayoutParams.TYPE_SYSTEM_DIALOG;
+        outLayoutParams.flags |= LayoutParams.FLAG_KEEP_SCREEN_ON;
     }
 
     private void updateDescription() {

@@ -21,20 +21,22 @@
 
     <style name="PermissionGrantScrollView">
         <item name="android:scrollbars">none</item>
-        <item name="android:fillViewport">true</item>
         <item name="android:clipChildren">false</item>
+        <item name="android:layout_gravity">bottom</item>
     </style>
 
     <style name="PermissionGrantSingleton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/sheet_background_inset</item>
+        <item name="android:layout_gravity">bottom</item>
     </style>
 
     <style name="PermissionGrantDialog">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">?android:attr/windowBackground</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_device_default</item>
         <item name="android:orientation">vertical</item>
         <item name="android:showDividers">middle</item>
     </style>
@@ -385,19 +387,24 @@
     <style name="PermissionFilterDialogContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?android:colorBackgroundFloating</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_secondary_device_default</item>
         <item name="android:orientation">vertical</item>
     </style>
 
     <style name="PermissionFilterDialogTitleContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">?android:colorBackgroundFloating</item>
+        <item name="android:background">@*android:color/monet_background_secondary_device_default</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_secondary_device_default</item>
     </style>
 
     <style name="PermissionFilterDialogTitle"
            parent="@android:style/TextAppearance.DeviceDefault.WindowTitle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@*android:color/monet_background_secondary_device_default</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_secondary_device_default</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_marginTop">18dp</item>
         <item name="android:layout_marginBottom">24dp</item>
@@ -408,6 +415,8 @@
     <style name="PermissionFilterDialogScrollView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@*android:color/monet_background_secondary_device_default</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_secondary_device_default</item>
         <item name="android:fillViewport">true</item>
         <item name="android:orientation">vertical</item>
         <item name="android:fadeScrollbars">false</item>
@@ -416,6 +425,8 @@
     <style name="PermissionFilterDialogInnerContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@*android:color/monet_background_secondary_device_default</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_secondary_device_default</item>
         <item name="android:orientation">vertical</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>
@@ -423,6 +434,8 @@
     <style name="PermissionFilterDialogItemsContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@*android:color/monet_background_secondary_device_default</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_secondary_device_default</item>
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">start</item>
     </style>
@@ -603,6 +616,8 @@
     <style name="PermissionUsageDialogItemsContainer">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@*android:color/monet_background_secondary_device_default</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_secondary_device_default</item>
         <item name="android:layout_marginBottom">24dp</item>
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">start</item>
@@ -634,6 +649,8 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:background">@*android:color/monet_background_secondary_device_default</item>
+        <item name="android:backgroundTint">@*android:color/monet_background_secondary_device_default</item>
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">start|center_vertical</item>
     </style>
